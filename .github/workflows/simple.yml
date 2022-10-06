@@ -1,0 +1,18 @@
+#the file structure of .github/workflows/yourfilename.yml is mandatory
+name: Name of your workflow
+
+
+on: [push]
+
+jobs: 
+  run-shell-command: 
+      runs-on: ubuntu-22.04
+      steps: 
+        - name: echo a string  #name here is a keyword
+          run: echo "this is the string i want to echo"  #run is also a keyword. run....this command
+        - name: multilinescript
+          run: |
+              node -v
+              npm -v
+
+        
