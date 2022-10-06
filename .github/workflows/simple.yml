@@ -6,13 +6,13 @@ on: [push]
 
 jobs: 
   run-shell-command: 
-      runs-on: ubuntu-22.04
+      runs-on: windows-2019
       steps: 
         - name: echo a string  #name here is a keyword
-          run: echo "this is the string i want to echo"  #run is also a keyword. run....this command
+          run: get-help "*user"  #run is also a keyword. run....this command
         - name: multilinescript
           run: |
-              node -v
-              npm -v
+              echo "first run"
+              echo "second run"
 
         
