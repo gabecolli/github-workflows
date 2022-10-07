@@ -13,6 +13,6 @@ jobs:
         - name: multilinescript
           run: |
               echo "first run"
-              echo "second run"
+              echo "second runs"
 
         
