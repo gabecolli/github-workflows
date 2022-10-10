@@ -17,8 +17,9 @@ jobs: #start your jobs block
               echo "third run"
         - name : python Command
           run : | 
-            import platform
-            print(platform.processor())
+            def math(num):
+              return num * 2
+            print(math(4))
           shell: python #telling the runner which shell to run the script (step) on
 
 
