@@ -21,6 +21,14 @@ jobs: #start your jobs block
               return num * 2
             print(math(4))
           shell: python #telling the runner which shell to run the script (step) on
+  run-windows-command:
+    runs-on: windows-2019
+    steps:
+      - name: Directory Powershell
+        run: Get-Location
+      - name: Directory Bash
+        run: pwd
+        shell: bash
 
 
         
