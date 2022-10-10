@@ -13,5 +13,11 @@ jobs:
             who-to-greet: Gabriel
       - name: Log Greeting Time 
         run: echo "${{ steps.greet.outputs.time }}"  #syntaxx to reference variables   'steps' is variable github makes available as an object
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: List files
+        run: | 
+          pwd
+          ls 
 
           
