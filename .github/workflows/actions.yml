@@ -19,5 +19,9 @@ jobs:
         run: | 
           pwd
           ls -a
+# $GITHUB_SHA  this references the commit 
+# $GITHUB_REPOSITORY username/repo name
+# $GITHUB_WORKSPACE the workspace directory of the runner
+# ${{ github.token }} access token to authenticate to your repo. github is an object and token being an attriubute
 
           
