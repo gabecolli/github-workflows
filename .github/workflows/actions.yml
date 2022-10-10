@@ -1,0 +1,17 @@
+name: Actions workflow
+
+on: [push]
+
+jobs: 
+  run-github-actions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Simple JS Actions
+        id: greet  #need to have this ID to make it referenceable
+        uses: actions/hello-world-javascript-action@v1   #this is references an action in a public github repo
+        with:  #this with keyword is to specifcy the input for the github action we are using
+            who-to-greet: Gabriel
+      - name: Log Greeting Time 
+        run: echo "${{ steps.greet.outputs.time }}"  #syntaxx to reference variables   'steps' is variable github makes available as an object
+
+          
