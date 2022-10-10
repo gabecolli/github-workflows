@@ -4,15 +4,15 @@ name: Name of your workflow
 
 on: [push]
 
-jobs: 
-  run-shell-command: 
+jobs: #start your jobs block
+  run-shell-command: #the name of your job
       runs-on: windows-2019
       steps: 
-        - name: echo a string  #name here is a keyword
-          run: get-help "*user"  #run is also a keyword. run....this command
+        - name: echo a string  #name here is a keyword  the name of the step
+          run: echo "*user"  #run is also a keyword. run....this command the action you want the step to take
         - name: multilinescript
           run: |
               echo "first run"
               echo "second runs"
-
+              echo "third run"
         
