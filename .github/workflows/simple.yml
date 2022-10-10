@@ -6,7 +6,7 @@ on: [push]
 
 jobs: #start your jobs block
   run-shell-command: #the name of your job
-      runs-on: windows-2019
+      runs-on: ubuntu-18.04
       steps: 
         - name: echo a string  #name here is a keyword  the name of the step
           run: echo "*user"  #run is also a keyword. run....this command the action you want the step to take
@@ -15,4 +15,11 @@ jobs: #start your jobs block
               echo "first run"
               echo "second runs"
               echo "third run"
+        - name : python Command
+          run : | 
+            import platform
+            print(platform.processor())
+          shell: python #telling the runner which shell to run the script (step) on
+
+
         
