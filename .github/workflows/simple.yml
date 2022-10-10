@@ -23,6 +23,7 @@ jobs: #start your jobs block
           shell: python #telling the runner which shell to run the script (step) on
   run-windows-command:
     runs-on: windows-2019
+    needs: ["run-shell-command"]
     steps:
       - name: Directory Powershell
         run: Get-Location
