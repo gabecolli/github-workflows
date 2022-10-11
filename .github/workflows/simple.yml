@@ -1,5 +1,5 @@
 #the file structure of .github/workflows/yourfilename.yml is mandatory
-name: Name of your workflow
+name: Name of your workflows
 
 
 on: [push]
